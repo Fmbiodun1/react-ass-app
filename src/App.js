@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import profilePicture from './image/profile-img.jpg';
+import profilePicture from './image/img.jpg';
 import share from './image/_Avatar share button.png';
 import option from './image/mobile_Avatar share button.png';
 import github from './image/gitHubLogo.png';
@@ -19,41 +19,27 @@ function App() {
   return (
     <>
   <header>
-        <div className='profile'>
-          <img src={profilePicture} alt='profile' id='profile_img' />
+        <section className='profile'>
+          <img src={profilePicture} alt='profile' id='profile_img' className="shape" />
           <img src={hover} alt='profile' id='profile_img' className='hover' />
-          <a href={twitter} id='twitter'>
-            Odumosu oluwafemi
-          </a>
-          <h1 className='hidden' id='slack'>
-          Odumosu oluwafemi
-          </h1>a
-        </div>
+          <a href={twitter} id='twitter' >@fmbiodun</a>
+          <h1 className='hidden' id='slack'>fmbiodun</h1>
+        </section>
         <div className='share'>
           <img src={share} alt='share' className='share_icon' />
           <img src={option} alt='option' className='option_icon' />
         </div>
+
   </header>
       <main className='container'>
-        <div className='buttons'>
-          <a href={twitter} id='twitter'>
-            Twitter Link
-          </a>
-          <a href={zuriBtn} id='btn__zuri'>
-            Zuri Team
-          </a>
-          <a href={zuriBooks} id='books'>
-            Zuri Books
-          </a>
-          <a href={zuriBooks} id='book__python'>
-            Python Books
-          </a>
-          <a href={pitch} id='pitch'>
-            Background Check for Coders
-          </a>
-          <a href={zuriDesign} id='book__design'>
-            Design Books
-          </a>
+        <article className='buttons'>
+          <a href={zuriBtn} id='btn__zuri'>Zuri Team</a>
+          <a href={zuriBooks} id='books'>Books by Zuri</a>
+          <a href={zuriBooks} id='book__python'>Books on Python</a>
+          <a href={pitch} id='pitch'>Check for Coders</a>
+          <a href={zuriDesign} id='book__design'>Free design book</a>
+        </article>
+        <div className="spa">
         </div>
         <div className='icons'>
           <img src={slack} alt='slack' />
@@ -61,9 +47,9 @@ function App() {
         </div>
       </main>
       <footer>
-        <img src={zuri} alt='zuri logo' />
-        <small>Hng /Zuri Intership 2022</small>
-        <img src={I4G} alt='I4G logo' />
+        <img src={zuri} alt='zuri logo' className="zur" />
+        <small><b>HNG Internship 9 Frontend Task 1 2022</b></small>
+        <img src={I4G} alt='I4G logo' className="sty" />
       </footer>
     </>
   );

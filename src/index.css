@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  
 }
 
 html {
@@ -12,16 +13,17 @@ html {
 }
 
 body {
-  background-color: #ffffff;
   text-align: center;
   min-height: 100vh;
   max-width: 100vw;
+  background: rgba(1, 0, 0, 0);
+  overflow: hidden;
 }
 
 header,
 main,
 footer {
-  max-width: 85vw;
+  max-width: 100vw;
   margin: 0 auto;
 }
 
@@ -40,9 +42,22 @@ header a {
   text-decoration: none;
   margin-top: 1rem;
 }
+
 .profile {
   margin-left: 6rem;
   position: relative;
+ 
+}
+.shape{
+  width: 100%;
+  height: 30vh;
+  bottom: 10px;
+  border-radius: 50% 50%;
+}
+
+.profile a{
+  margin-bottom: 10px;
+  color:navy;
 }
 
 .hover {
@@ -58,23 +73,24 @@ header a {
 }
 
 main .buttons a {
-  display: block;
+  display: inline-block;
   text-decoration: none;
-  color: #101828;
-  background-color: #eaecf0;
-  padding: 1.5rem;
-  margin: 0 auto;
-  margin-top: 1rem;
-  width: 90%;
-  border-radius: 0.5rem;
+  background: black;
+  color: white;
+  padding: 1rem;
+  margin: 0 6px;
+  margin-top: 0.8rem;
+  width: 22%;
+  border-radius: 0.8rem;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 
 main .buttons a:hover {
-  /* border: 1px solid #101828; */
-  background-color: #d0d5dd;
+  background: #d0d5dd;
+  color:#101828;
 }
+
 
 .hidden,
 .option_icon {
@@ -91,10 +107,19 @@ main .buttons a:hover {
   justify-content: center;
   gap: 1rem;
   margin: 1.5rem 0;
+  
+}
+
+.icons img{
+  width: 5%;
+  height: 5vh;
+  margin-top: 35px;
+  margin-bottom: 0;
 }
 
 small {
-  color: #667085;
+  color: blue;
+  font-size: 15px;
 }
 
 footer {
@@ -104,9 +129,26 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: gray;
+}
+
+footer .zur{
+  margin-left: 7px;
+  width: 10%;
+  height: 10%;
+}
+
+footer .sty{
+  width: 10%;
+  height: 10%;
+  margin-right: 9px;
 }
 
 @media (max-width: 767px) {
+  body{
+    overflow: auto;
+  }
+  
   .profile {
     margin-left: 2rem;
   }
@@ -114,8 +156,9 @@ footer {
   main .buttons a {
     width: 95%;
   }
-
-  footer,
+  footer{
+    width: 95%;
+  }
   .share_icon {
     display: none;
   }
@@ -123,4 +166,5 @@ footer {
   .option_icon {
     display: inline;
   }
+
 }
